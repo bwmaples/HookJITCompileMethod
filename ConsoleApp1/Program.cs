@@ -82,7 +82,7 @@ namespace ConsoleApp1
                 mCompileMethodDel = new CompileMethodDel(compileMethodDel);
                 // print ensure it isn't null
                 Interface.Info("origiCompilePtr is " + originCompilePtr.ToString());
-                // create hook and run
+
                 CompileMethodHook = LocalHook.Create(
                     originCompilePtr,
                     mCompileMethodDel,
