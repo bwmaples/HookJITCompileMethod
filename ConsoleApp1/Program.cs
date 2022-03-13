@@ -67,10 +67,6 @@ namespace ConsoleApp1
             IntPtr pJit = GetJit();
             if (pJit == null) return pJit;
             compiler = Marshal.PtrToStructure<CorJitCompilerNative>(Marshal.ReadIntPtr(pJit));
-            IntPtr pVTableLocal = Marshal.ReadIntPtr(pJit);
-
-            //uint lpflOldProtect;
-            //Win32MemoryUtils.VirtualProtect(pVTableLocal, sizeof(UInt64), Win32MemoryUtils.MemoryProtectionConstants.PAGE_READWRITE, out lpflOldProtect);
 
             originCompile = compiler.CompileMethod;
             IntPtr LocalOriginCompilePtr = Marshal.GetFunctionPointerForDelegate(originCompile);
@@ -94,25 +90,23 @@ namespace ConsoleApp1
         internal static CorJitCompiler.CorJitResult compileMethodDel(IntPtr thisPtr, [In] IntPtr corJitInfoPtr, [In] CorInfo* methodInfo,
             CorJitFlag flags, [Out] IntPtr nativeEntry, [Out] IntPtr nativeSizeOfCode)
         {
-            var res = originCompile(thisPtr, corJitInfoPtr, methodInfo, flags, nativeEntry, nativeSizeOfCode);
-            return res;
-            //try
-            //{
-            //    Interface.Info("[" + RemoteHooking.GetCurrentProcessId() + ":" +
-            //        RemoteHooking.GetCurrentThreadId() + "]: \"" + " ############# My This compile Method called ##############" + "\"");
-            //    Interface.Info("[" + RemoteHooking.GetCurrentProcessId() + ":" +
-            //        RemoteHooking.GetCurrentThreadId() + "]: \"" + "############# orginCompile method is ########## " + Marshal.GetFunctionPointerForDelegate(originCompile).ToString() + "\"");
+            try
+            {
+                Interface.Info("[" + RemoteHooking.GetCurrentProcessId() + ":" +
+                    RemoteHooking.GetCurrentThreadId() + "]: \"" + " ############# My This compile Method called ##############" + "\"");
+                Interface.Info("[" + RemoteHooking.GetCurrentProcessId() + ":" +
+                    RemoteHooking.GetCurrentThreadId() + "]: \"" + "############# orginCompile method is ########## " + Marshal.GetFunctionPointerForDelegate(originCompile).ToString() + "\"");
+                Interface.Info("[" + RemoteHooking.GetCurrentProcessId() + ":" +
+                    RemoteHooking.GetCurrentThreadId() + "]: \"" + "############# ilcodes is ########## " + methodInfo->ILCodeSize + "\"");
 
-            //    Interface.Info("[" + RemoteHooking.GetCurrentProcessId() + ":" +
-            //        RemoteHooking.GetCurrentThreadId() + "]: \"" + "############# ilcodes is ########## " + methodInfo->ILCodeSize + "\"");
+                return originCompile(thisPtr, corJitInfoPtr, methodInfo, flags, nativeEntry, nativeSizeOfCode);
+            }
+            catch (Exception execError)
+            {
+                Interface.ReportException(execError);
+                return originCompile(thisPtr, corJitInfoPtr, methodInfo, flags, nativeEntry, nativeSizeOfCode);
+            }
 
-            //    return originCompile(thisPtr, corJitInfoPtr, methodInfo, flags, nativeEntry, nativeSizeOfCode);
-            //}
-            //catch (Exception execError)
-            //{
-            //    Interface.ReportException(execError);
-            //    return originCompile(thisPtr, corJitInfoPtr, methodInfo, flags, nativeEntry, nativeSizeOfCode);
-            //}
         }
 
         public int getC_D_Del(IntPtr thisPtr, int test1, int test2) {
