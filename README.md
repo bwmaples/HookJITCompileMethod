@@ -1,6 +1,8 @@
 # HookJITCompileMethod
 An attempt at using easyhook hook JIT
-
+Modified the FileMon example of easyhook
+FileMon -> ConsoleApp5
+FileMonInject -> ConsoleApp1
 Ref:
 
 https://github.com/EasyHook/EasyHook
