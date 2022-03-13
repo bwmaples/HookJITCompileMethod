@@ -29,16 +29,21 @@ namespace ConsoleApp1
         public static CompileMethodDel mCompileMethodDel = null;
         public static IntPtr originCompilePtr;
 
-        //Test test1l;
+        // use getJit() method get compileMethod of jit
+        // source code https://github.com/dotnet/coreclr/blob/release/3.1/src/jit/ee_il_dll.hpp
         public static IntPtr GetCompileMethodPtr() {
+            // get CILJit() obj
+            // source code https://github.com/dotnet/coreclr/blob/release/3.1/src/jit/ee_il_dll.cpp
             IntPtr pJit = GetJit();
-            if (pJit == null) return pJit;
+            if (pJit == null) return IntPtr.Zero;
+            // self define CorJit struct.
+            // Although the structure of each .net version will be different, compileMethod is always the first member.
             compiler = Marshal.PtrToStructure<CorJitCompilerNative>(Marshal.ReadIntPtr(pJit));
-
+            // get the origin compileMethod method
             originCompile = compiler.CompileMethod;
-            IntPtr LocalOriginCompilePtr = Marshal.GetFunctionPointerForDelegate(originCompile);
-            originCompilePtr = LocalOriginCompilePtr;
-            return LocalOriginCompilePtr;
+            // get the ptr of compileMethod
+            originCompilePtr = Marshal.GetFunctionPointerForDelegate(originCompile);
+            return originCompilePtr;
         }
 
         public Main(
@@ -65,16 +70,19 @@ namespace ConsoleApp1
 
                 CreateFileHook.ThreadACL.SetExclusiveACL(new Int32[] { 0 });
 
+                // get compileMethod ptr
                 IntPtr originCompilePtr = GetCompileMethodPtr();
-                if (originCompilePtr == null)
+                if (originCompilePtr == IntPtr.Zero)
                 {
                     RemoteHooking.WakeUpProcess();
                     return;
                 }
 
+                // create replace delegate
                 mCompileMethodDel = new CompileMethodDel(compileMethodDel);
+                // print ensure it isn't null
                 Interface.Info("origiCompilePtr is " + originCompilePtr.ToString());
-
+                // create hook and run
                 CompileMethodHook = LocalHook.Create(
                     originCompilePtr,
                     mCompileMethodDel,
