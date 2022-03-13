@@ -1,0 +1,17 @@
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\bin\x64\Debug\net4.6.1\ClrAnalyzer.Core.dll
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\bin\x64\Debug\net4.6.1\ClrAnalyzer.Core.pdb
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.csproj.AssemblyReference.cache
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.AssemblyInfoInputs.cache
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.AssemblyInfo.cs
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.csproj.CoreCompileInputs.cache
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.dll
+E:\download\ClrAnalyzer-master\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.pdb
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\bin\x64\Debug\net4.6.1\ClrAnalyzer.Core.dll
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\bin\x64\Debug\net4.6.1\ClrAnalyzer.Core.pdb
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.AssemblyInfoInputs.cache
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.AssemblyInfo.cs
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.csproj.CoreCompileInputs.cache
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.dll
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x64\Debug\net4.6.1\ClrAnalyzer.Core.pdb

@@ -1,0 +1,9 @@
+F:\extraIncome\testpro\ConsoleApp5\bin\net4.6.1\ClrAnalyzer.Core.dll
+F:\extraIncome\testpro\ConsoleApp5\bin\net4.6.1\ClrAnalyzer.Core.pdb
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.csproj.AssemblyReference.cache
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.AssemblyInfoInputs.cache
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.AssemblyInfo.cs
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.csproj.CoreCompileInputs.cache
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.dll
+F:\extraIncome\testpro\ConsoleApp5\ClrAnalyzer.Core\obj\x86\Debug\net4.6.1\ClrAnalyzer.Core.pdb

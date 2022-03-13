@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = ClrAnalyzer.Core
+build_property.ProjectDir = e:\download\ClrAnalyzer-master\ClrAnalyzer.Core\
