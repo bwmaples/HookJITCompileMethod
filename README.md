@@ -9,6 +9,8 @@ FileMonInject -> ConsoleApp1
 
 Test exe file ./TargetProcess/WindowsFormsApp2.exe
 
+The exe file is ./ConsoleApp5/bin/Debug/ConsoleApp5.exe
+
 Ref:
 
 https://github.com/EasyHook/EasyHook
