@@ -1,7 +1,7 @@
 # HookJITCompileMethod
 Developed with Visual Studio 2019
 
-An attempt at using easyhook hook JIT
+An attempt at using easyhook to hook JIT
 
 Modified the FileMon example of easyhook
 
