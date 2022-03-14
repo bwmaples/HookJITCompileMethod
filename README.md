@@ -1,5 +1,5 @@
 # HookJITCompileMethod
-Developed in Visual Studio 2019
+Developed with Visual Studio 2019
 
 An attempt at using easyhook hook JIT
 
